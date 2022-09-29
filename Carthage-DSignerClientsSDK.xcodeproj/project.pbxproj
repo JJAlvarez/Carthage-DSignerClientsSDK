@@ -8,11 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		44D50A7B28E5A81100533AE1 /* Carthage_DSignerClientsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D50A7A28E5A81100533AE1 /* Carthage_DSignerClientsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44D50A9228E5A84000533AE1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8128E5A83F00533AE1 /* APIClient.swift */; };
+		44D50A9328E5A84000533AE1 /* UpdateSignState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8228E5A83F00533AE1 /* UpdateSignState.swift */; };
+		44D50A9428E5A84000533AE1 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8328E5A83F00533AE1 /* Endpoints.swift */; };
+		44D50A9528E5A84000533AE1 /* GetFilesOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8428E5A83F00533AE1 /* GetFilesOptions.swift */; };
+		44D50A9628E5A84000533AE1 /* FileListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8628E5A83F00533AE1 /* FileListItem.swift */; };
+		44D50A9728E5A84000533AE1 /* RejectFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8728E5A83F00533AE1 /* RejectFileResponse.swift */; };
+		44D50A9828E5A84000533AE1 /* InitializationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8828E5A83F00533AE1 /* InitializationResponse.swift */; };
+		44D50A9928E5A84000533AE1 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8928E5A83F00533AE1 /* ResponseError.swift */; };
+		44D50A9A28E5A84000533AE1 /* SendFileEmailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8A28E5A83F00533AE1 /* SendFileEmailResponse.swift */; };
+		44D50A9B28E5A84000533AE1 /* UpdateSignResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8B28E5A83F00533AE1 /* UpdateSignResponse.swift */; };
+		44D50A9C28E5A84000533AE1 /* GetFilesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8C28E5A83F00533AE1 /* GetFilesResponse.swift */; };
+		44D50A9D28E5A84000533AE1 /* ValidateUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8D28E5A83F00533AE1 /* ValidateUserResponse.swift */; };
+		44D50A9E28E5A84000533AE1 /* ResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8E28E5A84000533AE1 /* ResponseStatus.swift */; };
+		44D50A9F28E5A84000533AE1 /* SignFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8F28E5A84000533AE1 /* SignFileResponse.swift */; };
+		44D50AA028E5A84000533AE1 /* GetFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A9028E5A84000533AE1 /* GetFileResponse.swift */; };
+		44D50AA128E5A84000533AE1 /* UserEnrollmentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A9128E5A84000533AE1 /* UserEnrollmentState.swift */; };
+		44D50AA428E5A92900533AE1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D50AA328E5A92900533AE1 /* Alamofire.framework */; platformFilter = ios; };
+		44D50AA528E5A92900533AE1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44D50AA328E5A92900533AE1 /* Alamofire.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		44D50AA628E5A92900533AE1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				44D50AA528E5A92900533AE1 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		44D50A7728E5A81100533AE1 /* Carthage_DSignerClientsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Carthage_DSignerClientsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D50A7A28E5A81100533AE1 /* Carthage_DSignerClientsSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Carthage_DSignerClientsSDK.h; sourceTree = "<group>"; };
+		44D50A8128E5A83F00533AE1 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		44D50A8228E5A83F00533AE1 /* UpdateSignState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateSignState.swift; sourceTree = "<group>"; };
+		44D50A8328E5A83F00533AE1 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		44D50A8428E5A83F00533AE1 /* GetFilesOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetFilesOptions.swift; sourceTree = "<group>"; };
+		44D50A8628E5A83F00533AE1 /* FileListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileListItem.swift; sourceTree = "<group>"; };
+		44D50A8728E5A83F00533AE1 /* RejectFileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RejectFileResponse.swift; sourceTree = "<group>"; };
+		44D50A8828E5A83F00533AE1 /* InitializationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitializationResponse.swift; sourceTree = "<group>"; };
+		44D50A8928E5A83F00533AE1 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		44D50A8A28E5A83F00533AE1 /* SendFileEmailResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendFileEmailResponse.swift; sourceTree = "<group>"; };
+		44D50A8B28E5A83F00533AE1 /* UpdateSignResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateSignResponse.swift; sourceTree = "<group>"; };
+		44D50A8C28E5A83F00533AE1 /* GetFilesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetFilesResponse.swift; sourceTree = "<group>"; };
+		44D50A8D28E5A83F00533AE1 /* ValidateUserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateUserResponse.swift; sourceTree = "<group>"; };
+		44D50A8E28E5A84000533AE1 /* ResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseStatus.swift; sourceTree = "<group>"; };
+		44D50A8F28E5A84000533AE1 /* SignFileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignFileResponse.swift; sourceTree = "<group>"; };
+		44D50A9028E5A84000533AE1 /* GetFileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetFileResponse.swift; sourceTree = "<group>"; };
+		44D50A9128E5A84000533AE1 /* UserEnrollmentState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEnrollmentState.swift; sourceTree = "<group>"; };
+		44D50AA328E5A92900533AE1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D50AA428E5A92900533AE1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,6 +81,7 @@
 			children = (
 				44D50A7928E5A81100533AE1 /* Carthage-DSignerClientsSDK */,
 				44D50A7828E5A81100533AE1 /* Products */,
+				44D50AA228E5A92900533AE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +96,41 @@
 		44D50A7928E5A81100533AE1 /* Carthage-DSignerClientsSDK */ = {
 			isa = PBXGroup;
 			children = (
+				44D50A8128E5A83F00533AE1 /* APIClient.swift */,
+				44D50A8328E5A83F00533AE1 /* Endpoints.swift */,
+				44D50A8428E5A83F00533AE1 /* GetFilesOptions.swift */,
+				44D50A8528E5A83F00533AE1 /* response */,
+				44D50A8228E5A83F00533AE1 /* UpdateSignState.swift */,
+				44D50A9128E5A84000533AE1 /* UserEnrollmentState.swift */,
 				44D50A7A28E5A81100533AE1 /* Carthage_DSignerClientsSDK.h */,
 			);
 			path = "Carthage-DSignerClientsSDK";
+			sourceTree = "<group>";
+		};
+		44D50A8528E5A83F00533AE1 /* response */ = {
+			isa = PBXGroup;
+			children = (
+				44D50A8628E5A83F00533AE1 /* FileListItem.swift */,
+				44D50A8728E5A83F00533AE1 /* RejectFileResponse.swift */,
+				44D50A8828E5A83F00533AE1 /* InitializationResponse.swift */,
+				44D50A8928E5A83F00533AE1 /* ResponseError.swift */,
+				44D50A8A28E5A83F00533AE1 /* SendFileEmailResponse.swift */,
+				44D50A8B28E5A83F00533AE1 /* UpdateSignResponse.swift */,
+				44D50A8C28E5A83F00533AE1 /* GetFilesResponse.swift */,
+				44D50A8D28E5A83F00533AE1 /* ValidateUserResponse.swift */,
+				44D50A8E28E5A84000533AE1 /* ResponseStatus.swift */,
+				44D50A8F28E5A84000533AE1 /* SignFileResponse.swift */,
+				44D50A9028E5A84000533AE1 /* GetFileResponse.swift */,
+			);
+			path = response;
+			sourceTree = "<group>";
+		};
+		44D50AA228E5A92900533AE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D50AA328E5A92900533AE1 /* Alamofire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +155,7 @@
 				44D50A7328E5A81100533AE1 /* Sources */,
 				44D50A7428E5A81100533AE1 /* Frameworks */,
 				44D50A7528E5A81100533AE1 /* Resources */,
+				44D50AA628E5A92900533AE1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,6 +177,7 @@
 				TargetAttributes = {
 					44D50A7628E5A81100533AE1 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -129,6 +214,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D50A9828E5A84000533AE1 /* InitializationResponse.swift in Sources */,
+				44D50A9D28E5A84000533AE1 /* ValidateUserResponse.swift in Sources */,
+				44D50A9628E5A84000533AE1 /* FileListItem.swift in Sources */,
+				44D50A9228E5A84000533AE1 /* APIClient.swift in Sources */,
+				44D50AA128E5A84000533AE1 /* UserEnrollmentState.swift in Sources */,
+				44D50A9A28E5A84000533AE1 /* SendFileEmailResponse.swift in Sources */,
+				44D50A9428E5A84000533AE1 /* Endpoints.swift in Sources */,
+				44D50A9328E5A84000533AE1 /* UpdateSignState.swift in Sources */,
+				44D50A9B28E5A84000533AE1 /* UpdateSignResponse.swift in Sources */,
+				44D50A9E28E5A84000533AE1 /* ResponseStatus.swift in Sources */,
+				44D50A9C28E5A84000533AE1 /* GetFilesResponse.swift in Sources */,
+				44D50A9528E5A84000533AE1 /* GetFilesOptions.swift in Sources */,
+				44D50A9728E5A84000533AE1 /* RejectFileResponse.swift in Sources */,
+				44D50AA028E5A84000533AE1 /* GetFileResponse.swift in Sources */,
+				44D50A9928E5A84000533AE1 /* ResponseError.swift in Sources */,
+				44D50A9F28E5A84000533AE1 /* SignFileResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +359,7 @@
 		44D50A7F28E5A81100533AE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -265,6 +367,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -278,6 +384,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +393,7 @@
 		44D50A8028E5A81100533AE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -293,6 +401,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
