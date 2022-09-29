@@ -24,8 +24,7 @@
 		44D50A9F28E5A84000533AE1 /* SignFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8F28E5A84000533AE1 /* SignFileResponse.swift */; };
 		44D50AA028E5A84000533AE1 /* GetFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A9028E5A84000533AE1 /* GetFileResponse.swift */; };
 		44D50AA128E5A84000533AE1 /* UserEnrollmentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A9128E5A84000533AE1 /* UserEnrollmentState.swift */; };
-		44D50AA428E5A92900533AE1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D50AA328E5A92900533AE1 /* Alamofire.framework */; platformFilter = ios; };
-		44D50AA528E5A92900533AE1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44D50AA328E5A92900533AE1 /* Alamofire.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		44D50AA928E5B72100533AE1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 44D50AA828E5B72100533AE1 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				44D50AA528E5A92900533AE1 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,7 +59,6 @@
 		44D50A8F28E5A84000533AE1 /* SignFileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignFileResponse.swift; sourceTree = "<group>"; };
 		44D50A9028E5A84000533AE1 /* GetFileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetFileResponse.swift; sourceTree = "<group>"; };
 		44D50A9128E5A84000533AE1 /* UserEnrollmentState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEnrollmentState.swift; sourceTree = "<group>"; };
-		44D50AA328E5A92900533AE1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44D50AA428E5A92900533AE1 /* Alamofire.framework in Frameworks */,
+				44D50AA928E5B72100533AE1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +125,6 @@
 		44D50AA228E5A92900533AE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				44D50AA328E5A92900533AE1 /* Alamofire.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +158,9 @@
 			dependencies = (
 			);
 			name = "Carthage-DSignerClientsSDK";
+			packageProductDependencies = (
+				44D50AA828E5B72100533AE1 /* Alamofire */,
+			);
 			productName = "Carthage-DSignerClientsSDK";
 			productReference = 44D50A7728E5A81100533AE1 /* Carthage_DSignerClientsSDK.framework */;
 			productType = "com.apple.product-type.framework";
@@ -190,6 +189,9 @@
 				Base,
 			);
 			mainGroup = 44D50A6D28E5A81100533AE1;
+			packageReferences = (
+				44D50AA728E5B72100533AE1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 44D50A7828E5A81100533AE1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -445,6 +447,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44D50AA728E5B72100533AE1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = 5.2.2;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44D50AA828E5B72100533AE1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44D50AA728E5B72100533AE1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44D50A6E28E5A81100533AE1 /* Project object */;
 }
