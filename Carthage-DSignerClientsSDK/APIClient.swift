@@ -160,12 +160,13 @@ public class APIClient {
     //SignFile
     public func signFile(
         fileId: Int,
+        email: String,
         completionHandler: @escaping(Result<SignFileResponse,Error>) -> Void
     ){
         
         let url = self.baseUrl + Endpoints.SIGN_FILE.rawValue
 
-        let params : Dictionary = ["FileId": fileId]
+        let params : Dictionary = ["FileId": fileId, "Email": email] as [String : Any]
         
         AF.request(url, method: .post, parameters: params).validate().responseDecodable(of: SignFileResponse.self) { response in
             guard let data = response.data else {
