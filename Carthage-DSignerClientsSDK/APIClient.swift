@@ -254,6 +254,9 @@ public class APIClient {
                 case "USER_REJECTED_ENROLLMENT":
                     res.userState = UserEnrollmentState.USER_REJECTED_ENROLLMENT
                     
+                case "USER_PENDING_ENROLLMENT":
+                    res.userState = UserEnrollmentState.USER_PENDING_ENROLLMENT
+                    
                 case .none:
                     print("No se ha encontrado el estado del usuario")
                 case .some(_):
