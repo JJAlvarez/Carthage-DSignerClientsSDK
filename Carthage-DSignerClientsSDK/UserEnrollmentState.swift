@@ -14,4 +14,5 @@ public enum UserEnrollmentState {
     case USER_ENROLLED
     case USER_REJECTED_ENROLLMENT
     case USER_PENDING_ENROLLMENT
+    case USER_EXPIRED_REJECTED_ENROLLMENT
 }
