@@ -36,8 +36,9 @@ public class APIClient {
             "License": self.license,
             "Installation": installation,
             "Dpi": dpi,
-            "PlatformIdentifier": platformIdentifier
-        ]
+            "PlatformIdentifier": platformIdentifier,
+            "IncludeApiKey": true
+        ] as [String : Any]
 
         let credential = URLCredential(user: "", password: "", persistence: .forSession );
 
@@ -64,6 +65,7 @@ public class APIClient {
     //GetFiles
     public func getFiles(
         type: GetFilesOptions,
+        apiKey: String,
         completionHandler: @escaping(Result<GetFilesResponse,Error>) -> Void
     ){
         
@@ -72,7 +74,8 @@ public class APIClient {
         let params : Dictionary = ["Type": type.rawValue]
 
         let headers: HTTPHeaders = [
-            .contentType("application/json")
+            .contentType("application/json"),
+            .authorization(bearerToken: apiKey)
         ]
      
         AF.request(url, method: .get, parameters: params, headers: headers).validate().responseDecodable(of: GetFilesResponse.self) { response in
@@ -97,6 +100,7 @@ public class APIClient {
     //GetFile
     public func getFile(
         fileId: Int,
+        apiKey: String,
         completionHandler: @escaping(Result<GetFileResponse,Error>) -> Void
     ){
         
@@ -105,7 +109,8 @@ public class APIClient {
         let params : Dictionary = ["FileId": fileId]
 
         let headers: HTTPHeaders = [
-            .contentType("application/json")
+            .contentType("application/json"),
+            .authorization(bearerToken: apiKey)
         ]
      
         AF.request(url, method: .get, parameters: params, headers: headers).validate().responseDecodable(of: GetFileResponse.self) { response in
@@ -131,14 +136,20 @@ public class APIClient {
     public func rejectFile(
         fileId: Int,
         comment: String?,
+        apiKey: String,
         completionHandler: @escaping(Result<RejectFileResponse,Error>) -> Void
     ){
         
         let url = self.baseUrl + Endpoints.REJECT_FILE.rawValue
 
         let params : Dictionary = ["FileId": fileId, "Comment": comment ?? ""] as [String : Any]
+        
+        let headers: HTTPHeaders = [
+            .contentType("application/json"),
+            .authorization(bearerToken: apiKey)
+        ]
      
-        AF.request(url, method: .post, parameters: params).validate().responseDecodable(of: RejectFileResponse.self) { response in
+        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: RejectFileResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
@@ -161,6 +172,7 @@ public class APIClient {
     public func signFile(
         fileId: Int,
         email: String,
+        apiKey: String,
         completionHandler: @escaping(Result<SignFileResponse,Error>) -> Void
     ){
         
@@ -168,7 +180,12 @@ public class APIClient {
 
         let params : Dictionary = ["FileId": fileId, "Email": email] as [String : Any]
         
-        AF.request(url, method: .post, parameters: params).validate().responseDecodable(of: SignFileResponse.self) { response in
+        let headers: HTTPHeaders = [
+            .contentType("application/json"),
+            .authorization(bearerToken: apiKey)
+        ]
+        
+        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: SignFileResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
@@ -191,14 +208,20 @@ public class APIClient {
     public func sendFileEmail(
         fileId: Int,
         email: String,
+        apiKey: String,
         completionHandler: @escaping(Result<SendFileEmailResponse,Error>) -> Void
     ){
         
         let url = self.baseUrl + Endpoints.SEND_FILE_EMAIL.rawValue
 
         let params : Dictionary = ["FileId": fileId, "Email": email] as [String : Any]
+        
+        let headers: HTTPHeaders = [
+            .contentType("application/json"),
+            .authorization(bearerToken: apiKey)
+        ]
      
-        AF.request(url, method: .post, parameters: params).validate().responseDecodable(of: SendFileEmailResponse.self) { response in
+        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: SendFileEmailResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
@@ -278,14 +301,20 @@ public class APIClient {
     //ValidateUser
     public func updateSign(
         sign: String,
+        apiKey: String,
         completionHandler: @escaping(Result<UpdateSignResponse,Error>) -> Void
     ){
         
         let url = self.baseUrl + Endpoints.UPDATE_SIGN.rawValue
 
         let params : Dictionary = ["Sign": sign]
+        
+        let headers: HTTPHeaders = [
+            .contentType("application/json"),
+            .authorization(bearerToken: apiKey)
+        ]
      
-        AF.request(url, method: .post, parameters: params).validate().responseDecodable(of: UpdateSignResponse.self) { response in
+        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: UpdateSignResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
