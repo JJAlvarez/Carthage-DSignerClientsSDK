@@ -142,14 +142,14 @@ public class APIClient {
         
         let url = self.baseUrl + Endpoints.REJECT_FILE.rawValue
 
-        let params : Dictionary = ["FileId": fileId, "Comment": comment ?? ""] as [String : Any]
+        let params : Dictionary = ["FileId": String(fileId), "Comment": comment ?? ""] as [String : String]
         
         let headers: HTTPHeaders = [
             .contentType("application/json"),
             .authorization(bearerToken: apiKey)
         ]
      
-        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: RejectFileResponse.self) { response in
+        AF.request(url, method: .post, parameters: params, encoder: JSONParameterEncoder.default, headers: headers).validate().responseDecodable(of: RejectFileResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
@@ -178,14 +178,14 @@ public class APIClient {
         
         let url = self.baseUrl + Endpoints.SIGN_FILE.rawValue
 
-        let params : Dictionary = ["FileId": fileId, "Email": email] as [String : Any]
+        let params : Dictionary = ["FileId": String(fileId), "Email": email] as [String : String]
         
         let headers: HTTPHeaders = [
             .contentType("application/json"),
             .authorization(bearerToken: apiKey)
         ]
         
-        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: SignFileResponse.self) { response in
+        AF.request(url, method: .post, parameters: params, encoder: JSONParameterEncoder.default, headers: headers).validate().responseDecodable(of: SignFileResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
@@ -214,14 +214,14 @@ public class APIClient {
         
         let url = self.baseUrl + Endpoints.SEND_FILE_EMAIL.rawValue
 
-        let params : Dictionary = ["FileId": fileId, "Email": email] as [String : Any]
+        let params : Dictionary = ["FileId": String(fileId), "Email": email] as [String : String]
         
         let headers: HTTPHeaders = [
             .contentType("application/json"),
             .authorization(bearerToken: apiKey)
         ]
      
-        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: SendFileEmailResponse.self) { response in
+        AF.request(url, method: .post, parameters: params, encoder: JSONParameterEncoder.default, headers: headers).validate().responseDecodable(of: SendFileEmailResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
@@ -314,7 +314,7 @@ public class APIClient {
             .authorization(bearerToken: apiKey)
         ]
      
-        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: UpdateSignResponse.self) { response in
+        AF.request(url, method: .post, parameters: params, encoder: JSONParameterEncoder.default, headers: headers).validate().responseDecodable(of: UpdateSignResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
