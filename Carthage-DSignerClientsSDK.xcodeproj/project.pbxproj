@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442B00342B7EA69A001AB9B0 /* RSAUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B00332B7EA69A001AB9B0 /* RSAUtils.swift */; };
+		442B00362B7EA6F3001AB9B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B00352B7EA6F3001AB9B0 /* Constants.swift */; };
 		44D50A7B28E5A81100533AE1 /* Carthage_DSignerClientsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 44D50A7A28E5A81100533AE1 /* Carthage_DSignerClientsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44D50A9228E5A84000533AE1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8128E5A83F00533AE1 /* APIClient.swift */; };
 		44D50A9328E5A84000533AE1 /* UpdateSignState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D50A8228E5A83F00533AE1 /* UpdateSignState.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		442B00332B7EA69A001AB9B0 /* RSAUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAUtils.swift; sourceTree = "<group>"; };
+		442B00352B7EA6F3001AB9B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		44D50A7728E5A81100533AE1 /* Carthage_DSignerClientsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Carthage_DSignerClientsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D50A7A28E5A81100533AE1 /* Carthage_DSignerClientsSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Carthage_DSignerClientsSDK.h; sourceTree = "<group>"; };
 		44D50A8128E5A83F00533AE1 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				44D50A8228E5A83F00533AE1 /* UpdateSignState.swift */,
 				44D50A9128E5A84000533AE1 /* UserEnrollmentState.swift */,
 				44D50A7A28E5A81100533AE1 /* Carthage_DSignerClientsSDK.h */,
+				442B00332B7EA69A001AB9B0 /* RSAUtils.swift */,
+				442B00352B7EA6F3001AB9B0 /* Constants.swift */,
 			);
 			path = "Carthage-DSignerClientsSDK";
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 				44D50A9828E5A84000533AE1 /* InitializationResponse.swift in Sources */,
 				44D50A9D28E5A84000533AE1 /* ValidateUserResponse.swift in Sources */,
 				44D50A9628E5A84000533AE1 /* FileListItem.swift in Sources */,
+				442B00342B7EA69A001AB9B0 /* RSAUtils.swift in Sources */,
 				44D50A9228E5A84000533AE1 /* APIClient.swift in Sources */,
 				44D50AA128E5A84000533AE1 /* UserEnrollmentState.swift in Sources */,
 				44D50A9A28E5A84000533AE1 /* SendFileEmailResponse.swift in Sources */,
@@ -232,6 +239,7 @@
 				44D50AA028E5A84000533AE1 /* GetFileResponse.swift in Sources */,
 				44D50A9928E5A84000533AE1 /* ResponseError.swift in Sources */,
 				44D50A9F28E5A84000533AE1 /* SignFileResponse.swift in Sources */,
+				442B00362B7EA6F3001AB9B0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

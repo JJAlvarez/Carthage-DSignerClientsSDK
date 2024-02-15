@@ -31,34 +31,39 @@ public class APIClient {
     ){
         
         let url = self.baseUrl + Endpoints.INITIALIZATION.rawValue
-
-        let params: Dictionary = [
-            "License": self.license,
-            "Installation": installation,
-            "Dpi": dpi,
-            "PlatformIdentifier": platformIdentifier,
-            "IncludeApiKey": true
-        ] as [String : Any]
-
-        let credential = URLCredential(user: "", password: "", persistence: .forSession );
-
-        AF.request(url, method: .post, parameters: params).authenticate(with: credential).validate().responseDecodable(of: InitializationResponse.self) { response in
-            guard let data = response.data else {
-                
-                completionHandler(.failure(response.error!))
-                return
-                
-            }
+        
+        do {
+            let encodedText = try RSAUtils(publicKeyString: Constants.PUBLIC_KEY).encrypt(value: installation)
+            let params: Dictionary = [
+                "License": self.license,
+                "Installation": encodedText,
+                "Dpi": dpi,
+                "PlatformIdentifier": platformIdentifier,
+                "IncludeApiKey": true
+            ] as [String : Any]
             
-            do{
+            let credential = URLCredential(user: "", password: "", persistence: .forSession );
+            
+            AF.request(url, method: .post, parameters: params).authenticate(with: credential).validate().responseDecodable(of: InitializationResponse.self) { response in
+                guard let data = response.data else {
+                    
+                    completionHandler(.failure(response.error!))
+                    return
+                    
+                }
                 
-                let res = try JSONDecoder().decode(InitializationResponse.self, from: data)
-                completionHandler(.success(res))
-                
-            }catch let err {
-                
-                completionHandler(.failure(err))
+                do{
+                    
+                    let res = try JSONDecoder().decode(InitializationResponse.self, from: data)
+                    completionHandler(.success(res))
+                    
+                }catch let err {
+                    
+                    completionHandler(.failure(err))
+                }
             }
+        } catch let ex {
+            completionHandler(.failure(ex))
         }
     }
     
